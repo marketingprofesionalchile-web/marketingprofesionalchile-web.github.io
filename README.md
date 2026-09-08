@@ -10,8 +10,8 @@ Sitio web estático, mobile-first, para una agencia de marketing especializada e
 
 ## Contacto
 
-- **WhatsApp:** el botón flotante y los botones principales enlazan a `https://wa.me/56942967564`.
-  Para cambiar el número, busca `56942967564` en `index.html` y la constante `WA_NUMBER` en `script.js`.
+- **WhatsApp:** el botón flotante y los botones principales enlazan a `https://wa.me/56....`.
+  Para cambiar el número, busca `569...` en `index.html` y la constante `WA_NUMBER` en `script.js`.
 - **Correo:** el formulario puede enviar los datos a `marketingprofesionalchile@gmail.com`.
   Para cambiarlo, edita la constante `CONTACT_EMAIL` en `script.js`.
 
