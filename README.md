@@ -1,36 +1,39 @@
-# Marketing en Chile
+# Marketing para Venta de Parcelas — Chile
 
-Sitio web estático, mobile-first, listo para publicar gratis con GitHub Pages.
+Sitio web estático, mobile-first, para una agencia de marketing especializada en la **venta de parcelas y loteos** en Chile. Listo para publicar gratis con GitHub Pages.
 
 ## Archivos
-- `index.html`
-- `styles.css`
-- `script.js`
 
-## WhatsApp
-El botón flotante y los botones principales enlazan a:
-`https://wa.me/56942967564` con un mensaje inicial ya escrito.
-Para cambiar el número o el mensaje, busca `56942967564` en `index.html`.
+- `index.html` — estructura y contenido del sitio
+- `styles.css` — estilos (incluye el formulario de contacto)
+- `script.js` — menú, animaciones y lógica del formulario de leads
 
-## Publicar como marketingenchile.github.io
-1. Crea o usa una cuenta de GitHub.
-2. Crea un repositorio público llamado exactamente:
-   `marketingenchile.github.io`
-3. Sube los tres archivos (`index.html`, `styles.css`, `script.js`) a la raíz del repositorio.
-4. En GitHub, entra a Settings > Pages.
-5. En "Build and deployment", selecciona "Deploy from a branch".
-6. Elige la rama `main` y la carpeta `/ (root)`.
-7. Guarda.
+## Contacto
 
-La dirección será:
-https://marketingenchile.github.io
+- **WhatsApp:** el botón flotante y los botones principales enlazan a `https://wa.me/56942967564`.
+  Para cambiar el número, busca `56942967564` en `index.html` y la constante `WA_NUMBER` en `script.js`.
+- **Correo:** el formulario puede enviar los datos a `marketingprofesionalchile@gmail.com`.
+  Para cambiarlo, edita la constante `CONTACT_EMAIL` en `script.js`.
 
-### Por línea de comandos (opcional)
-```bash
-git init
+## Formulario de leads
+
+El formulario de la sección "Cotiza tu proyecto" no usa base de datos. Al enviar:
+- **Enviar por WhatsApp:** abre WhatsApp con los datos ya redactados hacia tu número.
+- **Prefiero enviar por correo:** abre el cliente de correo del visitante con el mensaje listo hacia tu Gmail.
+
+Requiere al menos nombre y teléfono.
+
+## Publicar con GitHub Pages
+
+1. Sube los archivos a la raíz del repositorio.
+2. En GitHub, entra a **Settings > Pages**.
+3. En "Build and deployment", elige **Deploy from a branch**.
+4. Selecciona la rama `main` y la carpeta `/ (root)`. Guarda.
+
+### Por línea de comandos
+
+```
 git add .
-git commit -m "Sitio Marketing en Chile"
-git branch -M main
-git remote add origin https://github.com/TU_USUARIO/marketingenchile.github.io.git
-git push -u origin main
+git commit -m "Sitio orientado a venta de parcelas + formulario de leads"
+git push
 ```
