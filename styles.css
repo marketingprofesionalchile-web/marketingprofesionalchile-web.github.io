@@ -3,17 +3,18 @@
 
 :root {
   --bg: #ffffff;
-  --ink: #0d1117;
-  --muted: #5b6472;
-  --line: #e6e9ee;
-  --soft: #f4f6f9;
-  --dark: #0d1117;
-  --accent: #1a56db;
-  --accent-dark: #1442ad;
-  --accent-soft: #e8eefc;
+  --ink: #14261b;
+  --muted: #5a6b60;
+  --line: #dde5de;
+  --soft: #f2f6f1;
+  --dark: #16281d;
+  --accent: #2e7d4f;
+  --accent-dark: #1f5d3a;
+  --accent-soft: #e2f0e6;
+  --gold: #b0894a;
   --wa: #25d366;
   --wa-dark: #1ebe5a;
-  --radius: 18px;
+  --radius: 16px;
   --ease: cubic-bezier(.22, 1, .36, 1);
 }
 
@@ -144,7 +145,7 @@ img { display: block; max-width: 100%; }
   position: absolute;
   top: -160px; right: -120px;
   width: 460px; height: 460px;
-  background: radial-gradient(circle, rgba(26,86,219,0.14), transparent 62%);
+  background: radial-gradient(circle, rgba(46,125,79,0.12), transparent 62%);
   pointer-events: none;
   animation: floaty 9s ease-in-out infinite;
 }
@@ -176,8 +177,8 @@ img { display: block; max-width: 100%; }
   color: var(--accent); font-weight: 600; font-size: .95rem;
 }
 .eyebrow::before { content: ""; width: 22px; height: 2px; background: var(--accent); border-radius: 2px; }
-.eyebrow-light { color: #7fa6f5; }
-.eyebrow-light::before { background: #7fa6f5; }
+.eyebrow-light { color: #8fc7a3; }
+.eyebrow-light::before { background: #8fc7a3; }
 
 /* ===== Sections ===== */
 .section { padding: 56px 0; }
@@ -457,18 +458,41 @@ footer { padding: 26px 0; border-top: 1px solid var(--line); }
   .lead-form { padding: 30px; }
 }
 
-/* ===== Hero con imagen ===== */
+/* ===== Hero con plano de loteo ===== */
 .hero-grid { display: grid; grid-template-columns: 1fr; gap: 36px; align-items: center; }
 .hero-media { position: relative; }
-.hero-media img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+.hero-plan {
+  position: relative;
   border-radius: var(--radius);
-  box-shadow: 0 20px 50px rgba(13, 17, 23, 0.16);
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(20, 38, 27, 0.22);
   border: 1px solid var(--line);
+}
+.hero-plan img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
   display: block;
 }
+.hero-plan-tags {
+  position: absolute;
+  left: 16px; bottom: 16px;
+  display: flex; flex-wrap: wrap; gap: 8px;
+}
+.plot-tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: .8rem; font-weight: 600;
+  background: rgba(255,255,255,0.95);
+  color: var(--ink);
+  box-shadow: 0 4px 12px rgba(20,38,27,0.18);
+}
+.plot-tag::before { content: ""; width: 9px; height: 9px; border-radius: 50%; }
+.plot-tag--available::before { background: #2e7d4f; }
+.plot-tag--reserved::before { background: var(--gold); }
+.plot-tag--sold::before { background: #b23b3b; }
+
 .hero-badge {
   position: absolute;
   left: -6px; bottom: -14px;
@@ -476,7 +500,8 @@ footer { padding: 26px 0; border-top: 1px solid var(--line); }
   padding: 12px 16px;
   background: #fff;
   border-radius: 14px;
-  box-shadow: 0 12px 30px rgba(13, 17, 23, 0.16);
+  box-shadow: 0 12px 30px rgba(20, 38, 27, 0.18);
+  z-index: 2;
 }
 .hero-badge-num {
   font-family: "Space Grotesk", sans-serif;
@@ -519,3 +544,21 @@ footer { padding: 26px 0; border-top: 1px solid var(--line); }
   .hero-grid { grid-template-columns: 1.05fr .95fr; gap: 48px; }
   .split-media { margin-top: 28px; }
 }
+
+/* ===== Plano de loteo como textura en sección proceso ===== */
+.section-dark {
+  position: relative;
+  background:
+    linear-gradient(rgba(22,40,29,0.92), rgba(22,40,29,0.96)),
+    url("img/plano-loteo.svg");
+  background-size: cover;
+  background-position: center;
+}
+.section-dark .container { position: relative; z-index: 1; }
+
+/* Placeholder de fotos: fondo verde suave */
+.card-media .card-img { background: var(--soft); }
+.split-media img { background: var(--soft); }
+
+/* Divider superior tipo "deslinde" en secciones claras */
+.problems { position: relative; }
