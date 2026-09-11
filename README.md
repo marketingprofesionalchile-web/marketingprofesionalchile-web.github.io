@@ -8,13 +8,6 @@ Sitio web estático, mobile-first, para una agencia de marketing especializada e
 - `styles.css` — estilos (incluye el formulario de contacto)
 - `script.js` — menú, animaciones y lógica del formulario de leads
 
-## Contacto
-
-- **WhatsApp:** el botón flotante y los botones principales enlazan a `https://wa.me/56942967564`.
-  Para cambiar el número, busca `56942967564` en `index.html` y la constante `WA_NUMBER` en `script.js`.
-- **Correo:** el formulario puede enviar los datos a `marketingprofesionalchile@gmail.com`.
-  Para cambiarlo, edita la constante `CONTACT_EMAIL` en `script.js`.
-
 ## Formulario de leads
 
 El formulario de la sección "Cotiza tu proyecto" no usa base de datos. Al enviar:
